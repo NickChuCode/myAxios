@@ -16,6 +16,7 @@ axios是一个基于promise的http库，同时支持浏览器和node端。
 下面，我们就从这几个特性出发，来解读axios的源码。
 
 - 文件结构
+  - [Axios项目源码文件结构](https://github.com/NickChuCode/myAxios/issues/1)
 - 浏览器端请求发送
 - node端请求发送
 - Promise API
