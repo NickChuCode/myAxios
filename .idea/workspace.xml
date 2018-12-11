@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a16e078a-db61-4ef7-81d7-b8851e8356c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/combineURLs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/combineURLs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/cookies.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/cookies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/deprecatedMethod.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/deprecatedMethod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/isAbsoluteURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/isAbsoluteURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helpers/isURLSameOrigin.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/isURLSameOrigin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helpers/normalizeHeaderName.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/normalizeHeaderName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helpers/parseHeaders.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/parseHeaders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helpers/spread.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/spread.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helpers/buildURL.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
+            <state relative-caret-position="1533">
               <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
             </state>
           </provider>
@@ -49,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helpers/cookies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
+            <state relative-caret-position="966">
               <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
             </state>
           </provider>
@@ -64,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helpers/isAbsoluteURL.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -75,24 +75,36 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helpers/isURLSameOrigin.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1109">
+              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helpers/normalizeHeaderName.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helpers/parseHeaders.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-99">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/helpers/spread.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="84">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -119,13 +131,17 @@
         <option value="$PROJECT_DIR$/lib/helpers/cookies.js" />
         <option value="$PROJECT_DIR$/lib/helpers/deprecatedMethod.js" />
         <option value="$PROJECT_DIR$/lib/helpers/isAbsoluteURL.js" />
+        <option value="$PROJECT_DIR$/lib/helpers/isURLSameOrigin.js" />
+        <option value="$PROJECT_DIR$/lib/helpers/normalizeHeaderName.js" />
+        <option value="$PROJECT_DIR$/lib/helpers/parseHeaders.js" />
+        <option value="$PROJECT_DIR$/lib/helpers/spread.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1218" />
+    <option name="x" value="402" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1561" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectView">
@@ -198,12 +214,14 @@
       <workItem from="1543847758789" duration="1744000" />
       <workItem from="1544111138147" duration="625000" />
       <workItem from="1544195690976" duration="1269000" />
-      <workItem from="1544279875501" duration="524000" />
+      <workItem from="1544279875501" duration="603000" />
+      <workItem from="1544497688368" duration="23000" />
+      <workItem from="1544497723737" duration="2567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13440000" />
+    <option name="totallyTimeSpent" value="16109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -215,10 +233,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1218" y="23" width="1280" height="1417" extended-state="0" />
+    <frame x="402" y="23" width="1561" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41461477" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33896104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,22 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/helpers/isURLSameOrigin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/helpers/normalizeHeaderName.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/helpers/parseHeaders.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/helpers/spread.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/helpers/bind.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -340,7 +342,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/helpers/buildURL.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
+        <state relative-caret-position="1533">
           <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
         </state>
       </provider>
@@ -354,7 +356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/helpers/cookies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
+        <state relative-caret-position="966">
           <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
         </state>
       </provider>
@@ -370,6 +372,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers/isURLSameOrigin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1109">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers/normalizeHeaderName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers/parseHeaders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers/spread.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
