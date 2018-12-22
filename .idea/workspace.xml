@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a16e078a-db61-4ef7-81d7-b8851e8356c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/adapters/xhr.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/adapters/xhr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/defaults.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/defaults.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/axios.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            <state relative-caret-position="692">
+              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/defaults.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/adapters/http.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/adapters/xhr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -31,6 +55,8 @@
     <findStrings>
       <find>isurlsearchparams</find>
       <find>urlsearchparams</find>
+      <find>dispatchXhrRequest</find>
+      <find>btoa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,11 +78,13 @@
         <option value="$PROJECT_DIR$/lib/helpers/parseHeaders.js" />
         <option value="$PROJECT_DIR$/lib/helpers/spread.js" />
         <option value="$PROJECT_DIR$/lib/axios.js" />
+        <option value="$PROJECT_DIR$/lib/defaults.js" />
+        <option value="$PROJECT_DIR$/lib/adapters/xhr.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="891" />
+    <option name="x" value="1099" />
     <option name="y" value="23" />
     <option name="width" value="1561" />
     <option name="height" value="1417" />
@@ -66,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -79,10 +106,17 @@
               <item name="myAxios" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="myAxios" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myAxios" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -128,12 +162,14 @@
       <workItem from="1544279875501" duration="603000" />
       <workItem from="1544497688368" duration="23000" />
       <workItem from="1544497723737" duration="3168000" />
-      <workItem from="1545406127881" duration="528000" />
+      <workItem from="1545406127881" duration="592000" />
+      <workItem from="1545444546326" duration="99000" />
+      <workItem from="1545444667615" duration="1914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17238000" />
+    <option name="totallyTimeSpent" value="19315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -145,10 +181,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="891" y="23" width="1561" height="1417" extended-state="0" />
+    <frame x="1099" y="23" width="1561" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33896104" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33896104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -160,7 +196,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32925898" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32925898" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32925898" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -188,9 +224,6 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/adapters/xhr.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/cancel/Cancel.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -228,13 +261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3507">
           <caret line="167" column="44" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/defaults.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -310,8 +336,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/axios.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="692">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/defaults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/adapters/http.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/adapters/xhr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
         </state>
       </provider>
     </entry>
