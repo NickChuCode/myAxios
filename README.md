@@ -21,7 +21,7 @@ axios是一个基于promise的http库，同时支持浏览器和node端。
   - [名词解释&常用函数](https://github.com/NickChuCode/myAxios/issues/2)
 - axios的使用方法与相关源码解析：axios有多种调用的方法，用户可以根据实际情况灵活使用，这种灵活性是如何实现的，是我们可以学习和借鉴的
   - [axios调用方式](https://github.com/NickChuCode/myAxios/issues/4)
-  - 所以，正是因为[createInstance为什么写这么绕](https://github.com/NickChuCode/myAxios/issues/3)，所以才让axios具有了多种调用方式
+  - 所以，正是因为[createInstance写这么绕](https://github.com/NickChuCode/myAxios/issues/3)，所以才让axios具有了多种调用方式
 - 用户配置config：几乎axios所有的功能都是通过这个对象进行配置和传递的，既是axios项目内部的沟通桥梁，也是用户跟axios进行沟通的桥梁。
 - axios.prototype.request：这个方法是整个axios的核心方法
 - 拦截器的使用与源码分析
