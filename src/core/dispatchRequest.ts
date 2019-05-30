@@ -3,6 +3,7 @@ import xhr from '../xhr'
 import { buildURL } from '../helpers/url'
 import { transformRequest, transformResponse } from '../helpers/data'
 import { processHeaders } from '../helpers/headers'
+import { flattenHeaders } from '../helpers/header'
 
 export default function dispatchRequest(
   config: AxiosRequestConfig
@@ -19,6 +20,7 @@ function processConfig(config: AxiosRequestConfig): void {
   // 因为 headers 的处理依赖 data，所以需要在 data 处理之前
   config.headers = transformHeaders(config)
   config.data = transformRequestData(config)
+  config.headers = flattenHeaders(config.headers, config.method!)
 }
 
 function transformUrl(config: AxiosRequestConfig): string {
