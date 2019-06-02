@@ -8,7 +8,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
       data = null,
       url,
       method = 'get',
-      headers,
+      headers = {},
       responseType,
       timeout
     } = config
@@ -19,7 +19,11 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
       request.responseType = responseType
     }
 
-    request.open(method.toUpperCase(), url, true)
+    if (timeout) {
+      request.timeout = timeout
+    }
+
+    request.open(method.toUpperCase(), url!, true)
 
     request.onreadystatechange = function handleLoad() {
       if (request.readyState !== 4) {
@@ -67,9 +71,6 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
       reject(createError('Network Error', config, null, request))
     }
 
-    if (timeout) {
-      request.timeout = timeout
-    }
     request.ontimeout = function handleTimeout() {
       reject(
         createError(

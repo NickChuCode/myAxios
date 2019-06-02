@@ -1,4 +1,6 @@
 import { AxiosRequestConfig } from './types'
+import { transformRequest, transformResponse } from './helpers/data'
+import { processHeaders } from './helpers/headers'
 
 const defaults: AxiosRequestConfig = {
   method: 'get',
@@ -9,7 +11,20 @@ const defaults: AxiosRequestConfig = {
     common: {
       Accept: 'application/json, text/plain, */*'
     }
-  }
+  },
+  transformRequest: [
+    function(data: any, headers: any): any {
+      processHeaders(headers, data)
+      // 这里的 transformRequest 是 helpers 中用来序列化 data 的，不是上面那个数组
+      return transformRequest(data)
+    }
+  ],
+  transformResponse: [
+    function(data: any): any {
+      // 这里的 transformResponse 是 helpers 中用来序列化 data 的，不是上面那个数组
+      return transformResponse(data)
+    }
+  ]
 }
 
 const methodsNoData = ['delete', 'get', 'head', 'options']
