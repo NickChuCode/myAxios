@@ -52,3 +52,34 @@ export function buildURL(url: string, params?: any) {
 
   return url
 }
+
+// 下面的代码判断 url 是否与当前同源
+interface URLOrigin {
+  protocol: string
+  host: string
+}
+
+// 判断 url 与当前请求发出地址是否同源
+export function isURLSameOrigin(requestURL: string): boolean {
+  const parsedOrigin = resolveURL(requestURL)
+  return (
+    parsedOrigin.protocol === currentOrigin.protocol &&
+    parsedOrigin.host === currentOrigin.host
+  )
+}
+
+const urlParsingNode = document.createElement('a')
+const currentOrigin = resolveURL(window.location.href)
+
+// 解析 url 的技巧：创建一个 a 节点（HTMLAnchorElement）
+// 然后将其 href 设置为 url 的值
+// 我们就可以在这个节点的 protocol 和 host 属性中拿到对应的协议和域名
+function resolveURL(url: string): URLOrigin {
+  urlParsingNode.setAttribute('href', url)
+  const { protocol, host } = urlParsingNode
+
+  return {
+    protocol,
+    host
+  }
+}
