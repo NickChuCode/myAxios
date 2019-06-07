@@ -87,6 +87,7 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
+    "@types/nprogress": "0.0.29",
     "@types/qs": "^6.5.3",
     "colors": "^1.3.2",
     "commitizen": "^3.0.0",
@@ -101,6 +102,7 @@
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.14.3",
     "prompt": "^1.0.0",
+    "nprogress": "^0.2.0",
     "replace-in-file": "^3.4.2",
     "rimraf": "^2.6.2",
     "rollup": "^0.67.0",
@@ -127,6 +129,9 @@
     "express": "^4.16.4",
     "body-parser": "^1.18.3",
     "portfinder": "^1.0.13",
-    "qs": "^6.7.0"
+    "qs": "^6.7.0",
+    "style-loader": "^0.23.1",
+    "css-loader": "^2.1.1",
+    "connect-multiparty": "^2.2.0"
   }
 }
