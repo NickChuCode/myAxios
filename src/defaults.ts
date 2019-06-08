@@ -26,7 +26,10 @@ const defaults: AxiosRequestConfig = {
       // 这里的 transformResponse 是 helpers 中用来序列化 data 的，不是上面那个数组
       return transformResponse(data)
     }
-  ]
+  ],
+  validateStatus(status: number): boolean {
+    return status >= 200 && status < 300
+  }
 }
 
 const methodsNoData = ['delete', 'get', 'head', 'options']
