@@ -13,11 +13,22 @@ import myAxios from '../../src/index'
 //     console.log(res)
 // })
 
-const instance = myAxios.create({
-    xsrfCookieName: 'XSRF-TOKEN-D',
-    xsrfHeaderName: 'X-XSRF-TOKEN-D'
-})
+// const instance = myAxios.create({
+//     xsrfCookieName: 'XSRF-TOKEN-D',
+//     xsrfHeaderName: 'X-XSRF-TOKEN-D'
+// })
+//
+// instance.get('/more/get').then(res => {
+//     console.log(res)
+// })
 
-instance.get('/more/get').then(res => {
+myAxios.post('/more/post', {
+    a: 1
+}, {
+    auth: {
+        username: 'nick',
+        password: '123'
+    }
+}).then(res => {
     console.log(res)
 })
