@@ -96,10 +96,45 @@ import qs from 'qs'
 
 
 // baseURL 示例
-const instance = myAxios.create({
-    baseURL: 'https://img.mukewang.com/'
-})
+// const instance = myAxios.create({
+//     baseURL: 'https://img.mukewang.com/'
+// })
+//
+// instance.get('5cc01a7b0001a33718720632.jpg')
+//
+// instance.get('https://img.mukewang.com/szimg/5becd5ad0001b89306000338-360-202.jpg')
 
-instance.get('5cc01a7b0001a33718720632.jpg')
 
-instance.get('https://img.mukewang.com/szimg/5becd5ad0001b89306000338-360-202.jpg')
+
+// 静态方法扩展示例
+function getA() {
+    return myAxios.get('/more/A')
+}
+
+function getB() {
+    return myAxios.get('/more/B')
+}
+
+myAxios.all([getA(), getB()])
+    .then(myAxios.spread(function(resA, resB) {
+        console.log(resA.data)
+        console.log(resB.data)
+    }))
+
+
+myAxios.all([getA(), getB()])
+    .then(([resA, resB]) => {
+        console.log(resA.data)
+        console.log(resB.data)
+    })
+
+const fakeConfig = {
+    baseURL: 'https://www.baidu.com/',
+    url: '/user/12345',
+    params: {
+        idClient: 1,
+        idTest: 2,
+        testString: 'thisIsATest'
+    }
+}
+console.log(myAxios.getUri(fakeConfig))

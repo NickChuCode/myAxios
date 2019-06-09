@@ -22,6 +22,10 @@ export interface AxiosRequestConfig {
   [propName: string]: any
 }
 
+export interface AxiosClassStatic {
+  new (config: AxiosRequestConfig): Axios
+}
+
 export interface AxiosTransformer {
   (data: any, headers?: any): any
 }
@@ -92,6 +96,8 @@ export interface Axios {
     data?: any,
     config?: AxiosRequestConfig
   ): AxiosPromise<T>
+
+  getUri(config?: AxiosRequestConfig): string
 }
 
 // 这样定义，里面有括号，说明是一个函数，外面又继承 Axios，说明是一个对象，
@@ -108,6 +114,10 @@ export interface AxiosStatic extends AxiosInstance {
   CancelToken: CancelTokenStatic
   Cancel: CancelStatic
   isCancel: (value: any) => boolean
+
+  all<T>(promises: Array<T | Promise<T>>): Promise<T[]>
+  spread<T, R>(callback: (...args: T[]) => R): (arr: T[]) => R
+  Axios: AxiosClassStatic
 }
 
 export interface CancelToken {
